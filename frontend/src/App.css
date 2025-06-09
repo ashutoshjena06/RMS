@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+* {
+  outline: 1px solid red; /* Temporarily shows element boundaries */
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column !important;
+    height: auto !important;
+    width: 90vw !important;
+  }
+  .card > div:first-child {
+    display: none !important;
+  }
+  .card > div:last-child {
+    flex: none !important;
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+}
+
+/* .navbar-brand:hover {
+  color: red;
+} */
