@@ -11,14 +11,14 @@ export function AdminProfile() {
 
   useEffect(() => {
     axios
-      .get(`http://192.168.0.116:3000/api/getUsersByEmail/${decodedEmail}`)
+      .get(`http://localhost:3000/api/getUsersByEmail/${decodedEmail}`)
       .then((response) => setInitialValues(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, [decodedEmail]);
 
   const handleUpdate = async (values) => {
     await axios
-      .put(`http://192.168.0.116:3000/api/update/${decodedEmail}`, values)
+      .put(`http://localhost:3000/api/update/${decodedEmail}`, values)
       .then((response) => {
         setInitialValues(response.data);
         alert("Profile updated successfully");
