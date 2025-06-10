@@ -34,7 +34,7 @@ export function Register() {
     onSubmit: async (user) => {
       console.log("Form submitted with values:", user);
       await axios
-        .post("http://192.168.0.116:3000/api/signup", user)
+        .post("http://localhost:3000/api/signup", user)
         .then(() => {
           alert("Registration successful");
           navigate("/login");

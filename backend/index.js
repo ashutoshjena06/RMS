@@ -98,10 +98,10 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, "0.0.0.0", () => {
+server.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
 
 // Connect to MongoDB
-connectToDatabase("mongodb://localhost:27017/RMS");
+connectToDatabase("mongodb://localhost:27017/RMSS");
 app.use("/api", userRoute);

@@ -28,7 +28,7 @@ export function ResetPassword() {
     onSubmit: async (user) => {
       console.log("Form submitted with values:", user);
       const response = await axios.put(
-        "http://192.168.0.116:3000/api/resetPassword",
+        "http://localhost:3000/api/resetPassword",
         user
       );
       console.log(response.data.message);

@@ -29,7 +29,7 @@ export function Login() {
       console.log("Form submitted with values:", user);
       try {
         const response = await axios.post(
-          "http://192.168.0.116:3000/api/login",
+          "http://localhost:3000/api/login",
           user
         );
         if (response.status === 200) {

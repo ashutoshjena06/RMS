@@ -17,7 +17,7 @@ export function UserManagement({ isAdmin = false }) {
     const email = cookies.email;
     try {
       const response = await axios.get(
-        `http://192.168.0.116:3000/api/getAll/${email}`
+        `http://localhost:3000/api/getAll/${email}`
       );
       setState(response.data);
     } catch (error) {
@@ -30,7 +30,7 @@ export function UserManagement({ isAdmin = false }) {
   function handleDeleteClick(email) {
     if (window.confirm("Are you sure you want to delete this user?")) {
       axios
-        .delete(`http://192.168.0.116:3000/api/delete/${email}`)
+        .delete(`http://localhost:3000/api/delete/${email}`)
         .then(() => {
           alert("User deleted successfully");
           setState((prev) => prev.filter((user) => user.email !== email));
