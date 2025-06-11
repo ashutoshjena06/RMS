@@ -13,7 +13,7 @@ export function EditUserManagement({ user, onClose }) {
     enableReinitialize: true,
     onSubmit: (values) => {
       axios
-        .put(`http://localhost:3000/api/update/${values.email}`, values)
+        .put(`http://localhost:4000/api/update/${values.email}`, values)
         .then(() => {
           alert("User updated successfully");
           onClose(values);
